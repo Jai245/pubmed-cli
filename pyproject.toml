@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pubmed-cli"
+version = "0.1.0"
+description = "Fetch PubMed papers via E-utilities and export enriched CSVs."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "pubmed_cli" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_cli.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
